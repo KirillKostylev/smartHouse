@@ -1,6 +1,7 @@
 package model;
 
 import controller.ActionForSmartHouse;
+import view.OutputData;
 
 public class Windows implements ActionForSmartHouse {
     private boolean statusWindows;
@@ -13,13 +14,13 @@ public class Windows implements ActionForSmartHouse {
     @Override
     public void onExecute() {
         setStatusWindows(true);
-        System.out.println("Windows turn on");
+        OutputData.output("Windows open");
     }
 
     @Override
     public void offExecute() {
         setStatusWindows(false);
-        System.out.println( "Windows turn off");
+        OutputData.output( "Windows close");
 
     }
 }

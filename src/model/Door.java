@@ -1,6 +1,7 @@
 package model;
 
 import controller.ActionForSmartHouse;
+import view.OutputData;
 
 public class Door implements ActionForSmartHouse {
     private boolean statusDoor;
@@ -13,13 +14,13 @@ public class Door implements ActionForSmartHouse {
     @Override
     public void onExecute() {
         setStatusDoor(true);
-        System.out.println("Door turn on");
+        OutputData.output("Door open");
     }
 
     @Override
     public void offExecute() {
         setStatusDoor(false);
-        System.out.println("Door turn off");
+        OutputData.output("Door close");
 
     }
 }

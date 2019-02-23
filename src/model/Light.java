@@ -1,6 +1,7 @@
 package model;
 
 import controller.ActionForSmartHouse;
+import view.OutputData;
 
 public class Light implements ActionForSmartHouse {
     private boolean statusLight;
@@ -13,12 +14,12 @@ public class Light implements ActionForSmartHouse {
     @Override
     public void onExecute() {
         setStatusLight(true);
-        System.out.println("Light turn on");
+        OutputData.output("Light turn on");
     }
 
     @Override
     public void offExecute() {
         setStatusLight(false);
-        System.out.println( "Light turn off");
+        OutputData.output( "Light turn off");
     }
 }
